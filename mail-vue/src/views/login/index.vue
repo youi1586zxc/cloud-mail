@@ -47,6 +47,14 @@
           <el-button class="btn" v-if="settingStore.settings.linuxdoSwitch"  style="margin-top: 10px"  @click="linuxDoLogin">
             <el-avatar src="/image/linuxdo.webp" :size="18" style="margin-right: 10px" />LinuxDo
           </el-button>
+          <el-button 
+            class="btn" 
+            v-if="settingStore.settings.githubSwitch"  
+            style="margin-top: 10px"  
+            @click="githubLogin"> 
+            <Icon icon="mingcute:github-line" width="20" height="20" style="margin-right: 10px" />GitHub
+          </el-button>
+
         </div>
         <div v-show="show !== 'login'">
           <el-input class="email-input" v-model="registerForm.email" type="text" :placeholder="$t('emailAccount')"
